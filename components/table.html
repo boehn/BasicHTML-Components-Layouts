@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Table</title>
+    <style>
+      :root {
+        --light-blue: #e6f3ff;
+        --light-gray: rgb(245, 245, 245);
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        color: var(--blue);
+      }
+
+      table {
+        width: 825px;
+        margin-top: 100px;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 16px 24px;
+        text-align: left;
+      }
+
+      thead th {
+        color: var(--blue-text);
+        background-color: var(--blue);
+        width: 25%;
+      }
+
+      tr:nth-child(even) {
+        background-color: var(--light-blue);
+      }
+
+      tr:nth-child(odd) {
+        background-color: var(--light-gray);
+      }
+    </style>
+  </head>
+  <body>
+    <a href="../index.html">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="back-icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+        />
+      </svg>
+    </a>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Hero</th>
+          <th>Primary Attribute</th>
+          <th>Base Strength</th>
+          <th>Base Agility</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Dragon Knight</th>
+          <td>XX</td>
+          <td>XX</td>
+          <td>XX</td>
+        </tr>
+        <tr>
+          <th>Enchantress</th>
+          <td>XX</td>
+          <td>XX</td>
+          <td>XX</td>
+        </tr>
+        <tr>
+          <th>Jakiro</th>
+          <td>XX</td>
+          <td>XX</td>
+          <td>XX</td>
+        </tr>
+
+        <tr>
+          <th>Tinker</th>
+          <td>XX</td>
+          <td>XX</td>
+          <td>XX</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

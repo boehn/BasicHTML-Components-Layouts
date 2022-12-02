@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App Email</title>
+    <style>
+      :root {
+        --davis-grey: #46494c;
+        --violet: #7048e8;
+        --isabelline: #f5f1ebff;
+        --light-gray: #dadada;
+        --dark-violet: #5f3dc4;
+        --horrible-pink: #d6336c;
+      }
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        font: inherit;
+      }
+
+      body {
+        font-family: sans-serif;
+        color: var(--davis-grey);
+        font-size: 20px;
+        height: 100vh;
+        text-align: center;
+        font-weight: bold;
+
+        display: grid;
+        grid-template-columns: 64px 350px 1fr 200px;
+        grid-template-rows: 64px 1fr;
+      }
+
+      nav,
+      section,
+      main,
+      aside {
+        padding-top: 24px;
+      }
+
+      nav {
+        background-color: var(--davis-grey);
+        color: var(--isabelline);
+        grid-row: 1 / -1;
+      }
+
+      .nav-icon {
+        height: 24px;
+        width: 24px;
+        stroke: var(--isabelline);
+      }
+
+      menu {
+        background-color: var(--violet);
+        color: var(--isabelline);
+        grid-column: 2 /-1;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0 40px;
+      }
+
+      button {
+        font-size: 16px;
+        font-weight: bold;
+        background-color: var(--dark-violet);
+        cursor: pointer;
+        border: none;
+        color: var(--isabelline);
+        padding: 8px 12px;
+        display: inline-block;
+      }
+
+      button:last-child {
+        background-color: var(--horrible-pink);
+        margin-left: auto;
+      }
+
+      section {
+        background-color: var(--light-gray);
+        grid-column: 2 / 3;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px;
+        overflow: scroll;
+      }
+
+      .email {
+        background-color: #adb5bd;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      aside {
+        background-color: var(--light-gray);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="../index.html"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="nav-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+          />
+        </svg>
+      </a>
+    </nav>
+    <menu>
+      <button>New</button>
+      <button>Reply</button>
+      <button>Forward</button>
+      <button>Mark unread</button>
+      <button>Trash</button>
+    </menu>
+    <section>
+      <div class="email">Email 1</div>
+      <div class="email">Email 2</div>
+      <div class="email">Email 3</div>
+      <div class="email">Email 4</div>
+      <div class="email">Email 5</div>
+      <div class="email">Email 6</div>
+      <div class="email">Email 7</div>
+      <div class="email">Email 8</div>
+      <div class="email">Email 9</div>
+      <div class="email">Email 10</div>
+    </section>
+    <main>Email view</main>
+    <aside>Aditional info</aside>
+  </body>
+</html>

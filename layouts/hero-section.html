@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Section</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Gugi&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap");
+
+      :root {
+        --vermilion: #c6371eff;
+        --isabelline: #f5f1ebff;
+        --davis-grey: #46494c;
+        --rosso-corsa: #d12211ff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Mulish", sans-serif;
+        font-size: 18px;
+        color: var(--davis-grey);
+      }
+
+      a:link,
+      a:visited {
+        text-decoration: none;
+      }
+
+      a:hover,
+      a:active {
+        color: var(--rosso-corsa);
+      }
+
+      header {
+        height: 100vh;
+        position: relative;
+
+        background-image: linear-gradient(
+            rgba(34, 34, 34, 0.5),
+            rgba(34, 34, 34, 0.5)
+          ),
+          url(../imgs/hero02.jpeg);
+        background-size: cover;
+        color: var(--isabelline);
+      }
+
+      .container {
+        width: 1000px;
+        margin: 0 auto;
+      }
+
+      nav {
+        font-size: 20px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 32px;
+        font-weight: bolder;
+        text-transform: uppercase;
+      }
+
+      .main-nav {
+        list-style: none;
+      }
+
+      .nav-link {
+        color: var(--isabelline);
+      }
+
+      .logo {
+        font-family: "Gugi", cursive;
+        font-size: 36px;
+        color: var(--vermilion);
+      }
+
+      .header-container {
+        width: 1000px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .header-container-inner {
+        width: 50%;
+      }
+
+      h1 {
+        font-size: 52px;
+        margin-bottom: 32px;
+      }
+
+      h2 {
+        font-size: 44px;
+        margin-bottom: 48px;
+        line-height: 1.05;
+      }
+
+      p {
+        font-size: 20px;
+        line-height: 1.6;
+        margin-bottom: 48px;
+      }
+
+      .btn:link,
+      .btn:visited {
+        display: inline-block;
+        font-size: 20px;
+        font-weight: 600;
+        background-color: var(--vermilion);
+        color: var(--isabelline);
+        padding: 16px 32px;
+        border-radius: 9px;
+      }
+
+      .btn:hover,
+      .btn:active {
+        background-color: var(--rosso-corsa);
+      }
+
+      section {
+        padding: 96px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <div class="logo">LOGO</div>
+        <ul class="main-nav">
+          <li><a class="nav-link" href="../index.html">HOME</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-container">
+        <div class="header-container-inner">
+          <h1>Battle of the Ancients</h1>
+          <p>
+            Every day, millions of players worldwide enter the battle as one of
+            over a hundred Dota Heroes in a 5v5 team clash. Dota is the deepest
+            multi-player action RTS game ever made and there's always a new
+            strategy or tactic to discover.
+          </p>
+          <a class="btn" href="https://store.steampowered.com/app/570/Dota_2/"
+            >Play for free!</a
+          >
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="container">
+        <h2>Something really interesting</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+          fugit iure voluptatem tempore ut id nisi velit nemo doloribus
+          obcaecati! Reprehenderit illum vero quos qui corrupti aspernatur quis
+          omnis dolorem!
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

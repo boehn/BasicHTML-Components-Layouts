@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Carousel</title>
+    <style>
+      .carousel {
+        position: relative;
+        background-color: var(--blue);
+        width: 800px;
+        margin: 100px auto;
+        border-radius: 8px;
+        color: var(--blue-text);
+        padding: 32px 64px 32px 86px;
+        display: flex;
+        /* align-items: center; */
+        gap: 86px;
+      }
+
+      img {
+        height: 200px;
+        border-radius: 8px;
+        transform: scale(1.5);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+      }
+
+      .testimonial-text {
+        font-weight: 500;
+        line-height: 1.5;
+        margin-bottom: 32px;
+      }
+
+      .testimonial-author {
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+
+      .testimonila-job {
+        font-size: 12px;
+      }
+
+      .btn {
+        position: absolute;
+        background-color: #fff;
+        border: none;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn-left {
+        left: 0;
+        top: 50%;
+        /* 50% of actual element's height */
+        transform: translate(-50%, -50%);
+      }
+      .btn-right {
+        right: 0;
+        top: 50%;
+        /* 50% of actual element's height */
+        transform: translate(50%, -50%);
+      }
+
+      .btn-icon {
+        height: 24px;
+        width: 24px;
+        stroke: var(--blue);
+      }
+
+      .dots {
+        position: absolute;
+        display: flex;
+        left: 50%;
+        transform: translate(-50%, 200%);
+        bottom: 0;
+        gap: 12px;
+      }
+
+      .dot {
+        height: 12px;
+        width: 12px;
+        background-color: #fff;
+        border: 2px solid var(--blue);
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .dot--active {
+        background-color: var(--blue);
+      }
+    </style>
+  </head>
+  <body>
+    <a href="../index.html">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="back-icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+        />
+      </svg>
+    </a>
+    <div class="carousel">
+      <img src="../imgs/maria.jpg" alt="Maria de Almeida" />
+      <blockquote class="testimonial">
+        <p class="testimonial-text">
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut expedita
+          doloribus iste? Ut officia laudantium cumque numquam exercitationem
+          aspernatur harum delenit."
+        </p>
+        <p class="testimonial-author">Maria de Almeida</p>
+        <p class="testimonila-job">Senior Product Manager at EDP Comercial</p>
+      </blockquote>
+      <button class="btn btn-left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5L8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+      <button class="btn btn-right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+
+      <div class="dots">
+        <button class="dot dot--active">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+      </div>
+    </div>
+  </body>
+</html>

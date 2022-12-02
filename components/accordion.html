@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion</title>
+    <link rel="stylesheet" href="../style.css" />
+
+    <style>
+      .accordion {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 700px;
+        margin: 100px auto;
+      }
+
+      .item {
+        display: grid;
+        column-gap: 24px;
+        row-gap: 32px;
+        grid-template-columns: auto 1fr auto;
+        box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+        padding: 24px;
+        align-items: center;
+      }
+
+      .number {
+        color: var(--light-blue);
+      }
+
+      .number,
+      .text {
+        font-size: 24px;
+        font-weight: 500;
+        /* color: var(--blue); */
+      }
+      .icon {
+        width: 24px;
+        height: 24px;
+        stroke: var(--blue);
+        cursor: pointer;
+      }
+
+      .hidden-box {
+        grid-column: 2;
+        display: none;
+      }
+
+      .hidden-box p {
+        line-height: 1.6;
+        margin-bottom: 24px;
+      }
+
+      .hidden-box ul {
+        color: var(--light-gray);
+        margin-left: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .open {
+        border-top: 4px solid var(--blue);
+      }
+
+      .open .number,
+      .open .text {
+        color: var(--blue);
+      }
+
+      .open .hidden-box {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="../index.html">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="back-icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+        />
+      </svg>
+    </a>
+
+    <div class="accordion">
+      <div class="item">
+        <p class="number">01</p>
+        <p class="text">Corporis sit amet consectetur elit nesciunt?</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+        <div class="hidden-box">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
+            nisi consequatur deserunt, aspernatur earum pariatur voluptate ad
+            architecto? Odit id iusto omnis veniam ipsa ipsum.
+          </p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Culpa doloremque, natus enim ratione voluptatum nihil.</li>
+            <li>
+              Sed maiores, id velit voluptas repellendus provident est non
+              necessitatibus.
+            </li>
+            <li>
+              Eius saepe corporis ipsa vero consectetur vitae a, facilis magnam
+              labore dignissimos atque repellat.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item open">
+        <p class="number">02</p>
+        <p class="text">Corporis sit amet consectetur elit nesciunt?</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+        <div class="hidden-box">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
+            nisi consequatur deserunt, aspernatur earum pariatur voluptate ad
+            architecto? Odit id iusto omnis veniam ipsa ipsum.
+          </p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Culpa doloremque, natus enim ratione voluptatum nihil.</li>
+            <li>
+              Sed maiores, id velit voluptas repellendus provident est non
+              necessitatibus.
+            </li>
+            <li>
+              Eius saepe corporis ipsa vero consectetur vitae a, facilis magnam
+              labore dignissimos atque repellat.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item">
+        <p class="number">03</p>
+        <p class="text">Corporis sit amet consectetur elit nesciunt?</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+        <div class="hidden-box">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
+            nisi consequatur deserunt, aspernatur earum pariatur voluptate ad
+            architecto? Odit id iusto omnis veniam ipsa ipsum.
+          </p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Culpa doloremque, natus enim ratione voluptatum nihil.</li>
+            <li>
+              Sed maiores, id velit voluptas repellendus provident est non
+              necessitatibus.
+            </li>
+            <li>
+              Eius saepe corporis ipsa vero consectetur vitae a, facilis magnam
+              labore dignissimos atque repellat.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

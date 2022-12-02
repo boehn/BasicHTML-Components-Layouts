@@ -1,0 +1,118 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/* FONT FAMILY */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Play&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700&display=swap");
+
+:root {
+  --davis-grey: #46494c;
+  --blue: #345774;
+  --gray: #343a40;
+  --light-gray: #616870;
+
+  --blue-text: rgb(208, 223, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ------------------------ */
+/* GENERAL STYLES */
+/* ------------------------ */
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--davis-grey);
+  font-size: 18px;
+}
+
+main {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  border: 2px solid var(--davis-grey);
+  padding: 32px;
+  /* align-items: center; */
+  /* justify-items: center; */
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--davis-grey);
+}
+
+a:hover,
+a:active {
+  color: var(--blue);
+  font-weight: 500;
+}
+
+.back-icon {
+  width: 24px;
+  height: 24px;
+  line-height: 1;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+/* ------------------------ */
+/* NAV STYLES */
+/* ------------------------ */
+
+header {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.title-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+@media (max-width: 949px) {
+  .nav {
+    flex-direction: column;
+    justify-items: center;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 550px) {
+  h2 {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Pagination</title>
+
+    <style>
+      .pagination {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+        display: flex;
+        align-items: center;
+        gap: 32px;
+      }
+
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--blue);
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        border-radius: 50%;
+        cursor: pointer;
+        padding: 6px;
+      }
+
+      .btn:hover {
+        background-color: var(--blue);
+      }
+
+      .btn:hover .btn-icon {
+        stroke: var(--blue-text);
+      }
+
+      .btn-icon {
+        height: 24px;
+        width: 24px;
+        stroke: var(--blue);
+      }
+
+      .pagination-link:link,
+      .pagination-link:visited {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 30px;
+        font-size: 18px;
+        color: var(--blue);
+        padding: 5px;
+        border-radius: 50%;
+      }
+
+      .pagination-link:hover,
+      .pagination-link:active,
+      .pagination-link.current-page {
+        color: var(--blue-text);
+        background-color: var(--blue);
+        font-weight: 400;
+      }
+
+      .dots {
+        color: var(--blue);
+      }
+    </style>
+  </head>
+  <body>
+    <a href="../index.html">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="back-icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+        />
+      </svg>
+    </a>
+
+    <div class="pagination">
+      <button class="btn btn-left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5L8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+      <a class="pagination-link" href="#">1</a>
+      <a class="pagination-link" href="#">2</a>
+      <a class="pagination-link current-page" href="#">3</a>
+      <a class="pagination-link" href="#">4</a>
+      <a class="pagination-link" href="#">5</a>
+      <a class="pagination-link" href="#">6</a>
+      <span class="dots">...</span>
+      <a class="pagination-link" href="#">23</a>
+      <button class="btn btn-right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+    </div>
+  </body>
+</html>
